@@ -30,7 +30,7 @@
 #include "mdp4_video_enhance.h"
 #endif
 
-unsigned int Lpanel_colors = 2;
+unsigned int Lpanel_colors = 0;
 extern void panel_load_colors(unsigned int val);
 
 static struct mipi_samsung_driver_data msd;
