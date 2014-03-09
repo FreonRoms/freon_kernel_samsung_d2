@@ -151,6 +151,9 @@ static struct acpu_level acpu_freq_tbl_slow[] __initdata = {
 	{ 0, {  1404000, HFPLL, 1, 0x34 }, L2(18), 1237500, AVS(0x400015) },
 	{ 1, {  1458000, HFPLL, 1, 0x36 }, L2(18), 1237500, AVS(0x100018) },
 	{ 1, {  1512000, HFPLL, 1, 0x38 }, L2(18), 1250000, AVS(0x400012) },
+	{ 1, {  1620000, HFPLL, 1, 0x3C }, L2(18), 1250000 },
+	{ 1, {  1728000, HFPLL, 1, 0x40 }, L2(18), 1275000 },
+	{ 1, {  1836000, HFPLL, 1, 0x44 }, L2(18), 1325000 },
 #endif
 	{ 0, { 0 } }
 };
@@ -189,6 +192,9 @@ static struct acpu_level acpu_freq_tbl_nom[] __initdata = {
 	{ 0, {  1404000, HFPLL, 1, 0x34 }, L2(18), 1187500, AVS(0x400015) },
 	{ 1, {  1458000, HFPLL, 1, 0x36 }, L2(18), 1187500, AVS(0x100018) },
 	{ 1, {  1512000, HFPLL, 1, 0x38 }, L2(18), 1200000, AVS(0x400012) },
+	{ 1, {  1620000, HFPLL, 1, 0x3C }, L2(18), 1250000 },
+	{ 1, {  1728000, HFPLL, 1, 0x40 }, L2(18), 1275000 },
+	{ 1, {  1836000, HFPLL, 1, 0x44 }, L2(18), 1325000 },
 #endif
 	{ 0, { 0 } }
 };
@@ -216,6 +222,9 @@ static struct acpu_level acpu_freq_tbl_fast[] __initdata = {
 	{ 0, {  1404000, HFPLL, 1, 0x34 }, L2(18), 1137500, AVS(0x400012) },
 	{ 1, {  1458000, HFPLL, 1, 0x36 }, L2(18), 1137500, AVS(0x400012) },
 	{ 1, {  1512000, HFPLL, 1, 0x38 }, L2(18), 1150000, AVS(0x400012) },
+	{ 1, {  1620000, HFPLL, 1, 0x3C }, L2(18), 1250000 },
+	{ 1, {  1728000, HFPLL, 1, 0x40 }, L2(18), 1275000 },
+	{ 1, {  1836000, HFPLL, 1, 0x44 }, L2(18), 1325000 },
 	{ 0, { 0 } }
 };
 
@@ -254,3 +263,4 @@ static int __init acpuclk_8960_init(void)
 	return platform_driver_probe(&acpuclk_8960_driver, acpuclk_8960_probe);
 }
 device_initcall(acpuclk_8960_init);
+
