@@ -62,23 +62,7 @@ fail:
 
 static int update_cpu_max_freq(int cpu, uint32_t max_freq)
 {
-	int ret = 0;
-
-	ret = msm_cpufreq_set_freq_limits(cpu, MSM_CPUFREQ_NO_LIMIT, max_freq);
-	if (ret)
-		return ret;
-
-	limited_max_freq = max_freq;
-	if (max_freq != MSM_CPUFREQ_NO_LIMIT)
-		pr_info("%s: Limiting cpu%d max frequency to %d\n",
-				KBUILD_MODNAME, cpu, max_freq);
-	else
-		pr_info("%s: Max frequency reset for cpu%d\n",
-				KBUILD_MODNAME, cpu);
-
-	ret = cpufreq_update_policy(cpu);
-
-	return ret;
+	return 0;
 }
 
 static void __cpuinit do_core_control(long temp)
